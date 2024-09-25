@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*Container för alla tärningar*/
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(222, 228, 255);
+  display: grid;
+  grid-template-rows: repeat(2, 15em);
+  grid-template-columns: repeat(3, 15em);
+  justify-content: center;
+  align-content: center;
+  gap: 1em;
+}
+
+/*Färg på prickar*/
+aside {
+  background-color: rgb(0, 0, 0);
+  border-radius: 3em;
+  margin: 1em;
+}
+
+/*Färg & border-radius & box-shadow & display:grid på alla tärningar*/
+.dice-1,
+.dice-2,
+.dice-3,
+.dice-4,
+.dice-5,
+.dice-6 {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgb(156, 156, 156);
+  border-radius: 0.4em;
+  display: grid;
+}
+
+/*Första tärningen*/
+.dice-1 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  /*Bestämmer vart pricken ska vara*/
+  aside {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+}
+
+/*Andra tärningen*/
+.dice-2 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  /*Bestämmer vart prickar ska vara*/
+  aside:nth-child(1) {
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
+
+  aside:nth-child(2) {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+}
+
+/*Tredje tärningen*/
+.dice-3 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  /*Bestämmer vart prickar ska vara*/
+  aside:nth-child(1) {
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
+
+  aside:nth-child(2) {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+
+  aside:nth-child(3) {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+}
+
+/*Fjärde tärningen*/
+.dice-4 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  /*Bestämmer vart prickar ska vara*/
+  aside:nth-child(1) {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  aside:nth-child(2) {
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
+
+  aside:nth-child(3) {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+
+  aside:nth-child(4) {
+    grid-row: 3/4;
+    grid-column: 3/4;
+  }
+}
+
+/*Femte tärningen*/
+.dice-5 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  /*Bestämmer vart prickar ska vara*/
+  aside:nth-child(1) {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  aside:nth-child(2) {
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
+
+  aside:nth-child(3) {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+
+  aside:nth-child(4) {
+    grid-row: 3/4;
+    grid-column: 3/4;
+  }
+
+  aside:nth-child(5) {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+}
+
+/*Sjätte tärningen*/
+.dice-6 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  /*Bestämmer vart prickar ska vara*/
+  aside:nth-child(1) {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  aside:nth-child(2) {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  aside:nth-child(3) {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+
+  aside:nth-child(4) {
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
+
+  aside:nth-child(5) {
+    grid-row: 2/3;
+    grid-column: 3/4;
+  }
+
+  aside:nth-child(6) {
+    grid-row: 3/4;
+    grid-column: 3/4;
+  }
+}
+
+/* .dice-6 {
+  border: 2px solid darkblue;
+  background-color: wheat;
+  border-radius: 0.4em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+ }
+ */
